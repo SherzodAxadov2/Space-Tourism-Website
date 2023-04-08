@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-barlow-norm);
+  font-size: var(--fs-text-big);
+  color: var(--clr-white);
+  background-color: var(--clr-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400px;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --clr-dark: #0b0d17;
+  --clr-light: #d0d6f9;
+  --clr-white: #fff;
+  --fs-h1: 150px;
+  --fs-h2: 100px;
+  --fs-h3: 56px;
+  --fs-h4: 32px;
+  --fs-h5: 28px;
+  --fs-text-big: 18px;
+  --fs-text: 16px;
+  --fs-text-small: 14px;
+  --ff-belle: "Bellefair", serif;
+  --ff-barlow-cond: "Barlow Condensed", sans-serif;
+  --ff-barlow-norm: "Barlow", sans-serif;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flow > * + * {
+  margin-top: 1rem;
+  outline: 1px solid red;
+}
+
+.container {
+  padding-inline: 2rem;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.none {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.bg-dark {
+  background-color: var(--clr-dark);
+}
+
+.bg-light {
+  background-color: var(--clr-light);
+}
+
+.bg-white {
+  background-color: var(--clr-white);
+}
+
+.text-white {
+  color: var(--clr-white);
+}
+
+.text-dark {
+  color: var(--clr-dark);
+}
+
+.text-light {
+  color: var(--clr-light);
+}
+
+.ff-belle {
+  font-family: var(--ff-belle);
+}
+
+.ff-barlow-cond {
+  font-family: var(--ff-barlow-cond);
+}
+
+.ff-barlow-norm {
+  font-family: var(--ff-barlow-norm);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2.75px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.fs-h1 {
+  font-size: var(--fs-h1);
+}
+
+.fs-h2 {
+  font-size: var(--fs-h2);
+}
+
+.fs-h3 {
+  font-size: var(--fs-h3);
+}
+
+.fs-h4 {
+  font-size: var(--fs-h4);
+}
+
+.fs-h5 {
+  font-size: var(--fs-h5);
+}
+
+.fs-text {
+  font-size: var(--fs-text);
+}
+.fs-text--big {
+  font-size: var(--fs-text-big);
+}
+.fs-text--small {
+  font-size: var(--fs-text-small);
+}
+
+.numbered-title {
+  font-family: var(--ff-barlow-cond);
+  font-size: var(--fs-h5);
+  text-transform: uppercase;
+  letter-spacing: 4.72px;
+}
+.numbered-title span {
+  font-weight: 700;
+  margin-right: 28px;
+  color: rgba(255, 255, 255, 0.1450980392);
+}/*# sourceMappingURL=main.css.map */
