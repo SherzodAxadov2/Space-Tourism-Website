@@ -20,9 +20,41 @@
         display: grid;
         text-align: center;
         place-items: center;
-        padding-inline: 0 1rem;
+        padding-inline: 1rem;
         p {
             max-width: 444px;
+        }
+        &--destination {
+            padding-bottom: 50px;
+            row-gap: 24px;
+            grid-template-areas:
+                "title"
+                "image"
+                "tabs"
+                "description";
+            & > img {
+                grid-area: image;
+                max-width: 60%;
+            }
+            .tab-list {
+                grid-area: tabs;
+            }
+            .description {
+                grid-area: description;
+                &__meta {
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding-top: 2rem;
+                    margin-top: 2rem;
+                    border-top: 1px solid #ffffff10;
+                    h3 {
+                        margin-bottom: 12px;
+                    }
+                    p {
+                        font-size: 28px;
+                    }
+                }
+            }
         }
     }
 }
@@ -33,7 +65,7 @@
             text-align: left;
             gap: var(--grid-gap, 2rem);
             grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
-            & > * {
+            &--home > * {
                 &:first-child {
                     grid-column: 2;
                 }
@@ -44,6 +76,19 @@
             &--home {
                 align-items: flex-end;
                 padding-bottom: max(130px, 20vh);
+            }
+            &--destination {
+                justify-items: start;
+                align-items: flex-start;
+                grid-template-areas:
+                    ". title title ."
+                    ". image tabs ."
+                    ". image description .";
+                .description {
+                    &__meta {
+                        justify-content: flex-start;
+                    }
+                }
             }
         }
     }
@@ -128,6 +173,7 @@
 }
 
 .numbered-title {
+    grid-area: title;
     font-family: var(--ff-barlow-cond);
     font-size: var(--fs-h5);
     text-transform: uppercase;

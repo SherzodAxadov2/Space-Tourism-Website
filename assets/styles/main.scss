@@ -123,6 +123,26 @@ body {
             }
         }
     }
+    .numbered-title {
+        justify-self: start;
+        margin-block: 40px;
+        margin-left: 2rem;
+    }
+    .container {
+        &-grid {
+            &--destination {
+                & > img {
+                    max-width: 90%;
+                }
+                .description {
+                    &__meta {
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+    }
 }
 @media (min-width: 640px) {
     nav {
@@ -189,6 +209,18 @@ body {
                         span {
                             display: inline;
                         }
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        &-grid {
+            &--destination {
+                .description {
+                    &__meta {
+                        gap: 4rem;
+                        justify-content: flex-start;
                     }
                 }
             }
