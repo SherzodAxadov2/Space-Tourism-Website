@@ -5,15 +5,37 @@
   --clr-dark: #0b0d17;
   --clr-light: #d0d6f9;
   --clr-white: #fff;
-  --fs-h1: 150px;
-  --fs-h2: 100px;
-  --fs-h3: 56px;
-  --fs-h4: 32px;
+  --fs-h1: clamp(80px, 8vw + 1rem, 150px);
+  --fs-h2: 56px;
+  --fs-h3: 24px;
+  --fs-h4: 16px;
   --fs-h5: 28px;
-  --fs-text-big: 18px;
+  --fs-text-big: 15px;
   --fs-text: 16px;
   --fs-text-small: 14px;
   --ff-belle: "Bellefair", serif;
   --ff-barlow-cond: "Barlow Condensed", sans-serif;
   --ff-barlow-norm: "Barlow", sans-serif;
+  --transition: all 0.3s ease;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --fs-h2: 80px;
+    --fs-h3: 40px;
+    --fs-h4: 24px;
+    --fs-h5: 22px;
+    --fs-text-big: 16px;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --fs-h2: 100px;
+    --fs-h3: 56px;
+    --fs-h4: 32px;
+    --fs-h5: 28px;
+    --fs-text-big: 18px;
+    --fs-text: 16px;
+    --fs-text-small: 14px;
+  }
 }/*# sourceMappingURL=root.css.map */

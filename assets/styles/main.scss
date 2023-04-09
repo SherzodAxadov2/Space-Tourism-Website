@@ -1,3 +1,197 @@
 @import "reset-styles/reset.scss";
 @import "root/root.scss";
 @import "utility-classes/utility.scss";
+
+.space {
+    span {
+        display: block;
+    }
+}
+
+body {
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.home {
+    background-image: url("../images/background-home-mobile.jpg");
+}
+
+.header {
+    &__logo {
+        display: flex;
+        flex: 1;
+        cursor: pointer;
+        margin: 1.5rem;
+    }
+    &-primary {
+        align-items: center;
+        justify-content: space-between;
+        nav {
+            .navigation {
+                &-primary {
+                    display: none;
+                }
+            }
+        }
+        .menu {
+            cursor: pointer;
+            margin-left: auto;
+            i {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.navigation {
+    &-primary {
+        gap: 5rem;
+        a {
+            span {
+                font-weight: bold;
+                margin-right: 8px;
+            }
+        }
+        &--mobile {
+            &.open {
+                inset: 0 0 0 25%;
+                opacity: 1;
+            }
+            display: none;
+            display: flex;
+            flex-direction: column;
+            padding: min(4.5rem, 20vh) 2rem;
+            gap: 2rem;
+            position: fixed;
+            inset: 0 0 0 125%;
+            opacity: 0;
+            z-index: 10000;
+            padding-bottom: 100px;
+            transition: var(--transition);
+            .close {
+                position: absolute;
+                top: 30px;
+                right: 27px;
+                font-size: 25px;
+                color: var(--clr-white);
+                &:hover {
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+            &.underline {
+                & > * {
+                    padding: 8px 0;
+                    &.active,
+                    &[aria-selected="true"] {
+                        border-bottom: 2px solid var(--clr-white);
+                    }
+                }
+            }
+            &* > {
+                display: flex;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+// media query
+@media (min-width: 576px) {
+    .home {
+        background-image: url("../images/background-home-tablet.jpg");
+        background-position: center center;
+    }
+}
+
+@media (min-width: 576px) {
+    .navigation {
+        &-primary {
+            padding-inline: clamp(3rem, 7vw, 7rem);
+            gap: 2rem;
+            &.underline {
+                & > * {
+                    padding: 3rem 0;
+                    a {
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 640px) {
+    nav {
+        .navigation {
+            &-primary {
+                display: flex;
+            }
+        }
+    }
+    .navigation {
+        &-primary {
+            &--mobile {
+                display: none;
+            }
+        }
+    }
+    .header {
+        &-primary {
+            nav {
+                .navigation {
+                    &-primary {
+                        display: flex;
+                    }
+                }
+            }
+            .menu {
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .home {
+        background-image: url("../images/background-home-desktop.jpg");
+    }
+    .header {
+        &__logo {
+            margin: 4rem 3.5rem;
+        }
+        &-primary {
+            &::before {
+                content: "";
+                position: relative;
+                height: 1px;
+                background: #ffffff25;
+                width: 100%;
+                order: 1;
+                margin-right: -60px;
+                z-index: 2;
+            }
+            nav {
+                order: 2;
+            }
+        }
+    }
+    .navigation {
+        &-primary {
+            gap: 3rem;
+            margin-block: 32px;
+            // padding-inline: 7rem;
+            &.underline {
+                & > * {
+                    a {
+                        span {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
