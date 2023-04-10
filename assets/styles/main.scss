@@ -153,6 +153,8 @@ body {
         transition: var(--transition);
         &:hover {
             border-color: #fff;
+            background-color: var(--clr-white);
+            color: var(--clr-dark);
         }
         &[aria-selected="true"] {
             background: #fff;
@@ -215,6 +217,9 @@ body {
     .destination {
         background-image: url("../images/background-destination-tablet.jpg");
         background-position: center center;
+        &__img {
+            cursor: pointer;
+        }
     }
     .crew {
         background-image: url("../images/background-crew-tablet.jpg");
@@ -360,15 +365,19 @@ body {
 @media (min-width: 768px) {
     .home {
         background-image: url("../images/background-home-desktop.jpg");
+        background-repeat: no-repeat;
     }
     .destination {
         background-image: url("../images/background-destination-desktop.jpg");
+        background-repeat: no-repeat;
     }
     .crew {
         background-image: url("../images/background-crew-desktop.jpg");
+        background-repeat: no-repeat;
     }
     .tech {
         background-image: url("../images/background-technology-desktop.jpg");
+        background-repeat: no-repeat;
     }
 
     .header {
