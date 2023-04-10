@@ -7,8 +7,6 @@ const techs = [launch, spaceport, capsule];
 
 Array.from(buttons).map((button) => {
   button.addEventListener("click", () => {
-    console.log(button.textContent);
-
     switch (button.textContent) {
       case "1":
         techs.map((tech) => {

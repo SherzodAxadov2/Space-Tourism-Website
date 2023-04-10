@@ -8,8 +8,6 @@ const planets = [Moon, Mars, Europa, Titan];
 
 Array.from(planetName).map((planetName) => {
   planetName.addEventListener("click", () => {
-    console.log(planetName.innerHTML);
-
     switch (planetName.innerHTML) {
       case "Moon":
         planets.map((planet) => {

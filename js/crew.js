@@ -8,7 +8,6 @@ const crews = [hurley, mark, victor, ansari];
 
 Array.from(allDots).forEach((dot) => {
   dot.addEventListener("click", () => {
-    console.log(dot.textContent);
 
     switch (dot.textContent) {
       case "hurley":
