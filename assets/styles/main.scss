@@ -57,6 +57,7 @@ body {
 
 .header {
     &__logo {
+        width: 40px;
         display: flex;
         flex: 1;
         cursor: pointer;
@@ -224,22 +225,31 @@ body {
         background-position: center center;
     }
 
-    .navigation {
-        &-primary {
-            padding-inline: clamp(3rem, 7vw, 7rem);
-            gap: 2rem;
-            &.underline {
-                & > * {
-                    padding: 3rem 0;
-                    a {
-                        span {
-                            display: none;
+    .header {
+        &__logo {
+            width: 48px;
+        }
+    }
+
+    nav {
+        .navigation {
+            &-primary {
+                padding-inline: clamp(3rem, 7vw, 7rem);
+                gap: 2rem;
+                &.underline {
+                    & > * {
+                        padding: 3rem 0;
+                        a {
+                            span {
+                                display: none;
+                            }
                         }
                     }
                 }
             }
         }
     }
+
     .numbered-title {
         justify-self: start;
         margin-block: 40px;
