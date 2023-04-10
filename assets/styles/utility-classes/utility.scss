@@ -25,7 +25,7 @@
             max-width: 444px;
         }
         &--destination {
-            padding-bottom: 50px;
+            padding-bottom: 58px;
             row-gap: 24px;
             grid-template-areas:
                 "title"
@@ -52,6 +52,34 @@
                     }
                     p {
                         font-size: 28px;
+                    }
+                }
+            }
+        }
+        &--crew {
+            padding-bottom: 100px;
+            row-gap: 32px;
+            grid-template-areas:
+                "title"
+                "image"
+                "tabs"
+                "description";
+            & > img {
+                grid-area: image;
+                max-width: 60%;
+                border-bottom: 1px solid #ffffff10;
+            }
+            .dots {
+                grid-area: tabs;
+            }
+            .crew__info {
+                grid-area: description;
+                h2 {
+                    margin-bottom: 8px;
+                }
+                & > p {
+                    &:last-child {
+                        margin-top: 16px !important;
                     }
                 }
             }
@@ -85,6 +113,9 @@
                     ". image tabs ."
                     ". image description .";
                 .description {
+                    h2 {
+                        padding-bottom: 14px;
+                    }
                     &__meta {
                         justify-content: flex-start;
                     }
@@ -104,6 +135,12 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+.tab-list {
+    & > * {
+        background: none;
+    }
 }
 
 .bg-dark {
@@ -189,7 +226,7 @@ button {
     border-radius: 50%;
     // overflow: hidden;
     .button {
-        &-large {
+        &--large {
             font-size: 32px;
             position: relative;
             display: inline-grid;
@@ -233,6 +270,7 @@ button {
 }
 
 .underline {
+    align-items: flex-start;
     & > * {
         cursor: pointer;
         padding: var(--underline-gap, 16px) 0;

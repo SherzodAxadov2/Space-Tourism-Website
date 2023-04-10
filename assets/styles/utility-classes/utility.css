@@ -28,7 +28,7 @@
   max-width: 444px;
 }
 .container-grid--destination {
-  padding-bottom: 50px;
+  padding-bottom: 58px;
   row-gap: 24px;
   grid-template-areas: "title" "image" "tabs" "description";
 }
@@ -55,6 +55,28 @@
 .container-grid--destination .description__meta p {
   font-size: 28px;
 }
+.container-grid--crew {
+  padding-bottom: 100px;
+  row-gap: 32px;
+  grid-template-areas: "title" "image" "tabs" "description";
+}
+.container-grid--crew > img {
+  grid-area: image;
+  max-width: 60%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.062745098);
+}
+.container-grid--crew .dots {
+  grid-area: tabs;
+}
+.container-grid--crew .crew__info {
+  grid-area: description;
+}
+.container-grid--crew .crew__info h2 {
+  margin-bottom: 8px;
+}
+.container-grid--crew .crew__info > p:last-child {
+  margin-top: 16px !important;
+}
 
 @media (min-width: 768px) {
   .container-grid {
@@ -77,6 +99,9 @@
     align-items: flex-start;
     grid-template-areas: ". title title ." ". image tabs ." ". image description .";
   }
+  .container-grid--destination .description h2 {
+    padding-bottom: 14px;
+  }
   .container-grid--destination .description__meta {
     justify-content: flex-start;
   }
@@ -91,6 +116,10 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.tab-list > * {
+  background: none;
 }
 
 .bg-dark {
@@ -191,7 +220,7 @@
 button {
   border-radius: 50%;
 }
-button .button-large {
+button .button--large {
   font-size: 32px;
   position: relative;
   display: inline-grid;
@@ -200,11 +229,11 @@ button .button-large {
   place-items: center;
   border-radius: 50%;
 }
-button .button-large:hover::after, button .button-large:focus::after {
+button .button--large:hover::after, button .button--large:focus::after {
   transform: scale(1.4);
   opacity: 1;
 }
-button .button-large::after {
+button .button--large::after {
   content: "";
   position: absolute;
   background: #979797;
@@ -228,6 +257,9 @@ button .button-large::after {
   margin-right: 8px;
 }
 
+.underline {
+  align-items: flex-start;
+}
 .underline > * {
   cursor: pointer;
   padding: var(--underline-gap, 16px) 0;
