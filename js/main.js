@@ -9,7 +9,6 @@ document.addEventListener("mousemove", parallax);
 function parallax(e) {
   document.querySelectorAll(".destination__img").forEach(function (move) {
     let moving__value = move.getAttribute("data-value");
-    console.log(moving__value);
     let x = e.clientX / moving__value;
     let y = e.clientY / moving__value;
 
@@ -21,7 +20,6 @@ document.addEventListener("mousemove", parallaxRotate);
 function parallaxRotate(e) {
   document.querySelectorAll(".tech__img").forEach(function (move) {
     let moving__value = move.getAttribute("data-rotate");
-    console.log(moving__value);
     let x = e.clientX / moving__value;
     let y = e.clientY / moving__value;
 
